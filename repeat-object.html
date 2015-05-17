@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>遍历对象</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+    </head>
+    <body>
+      <ul id="repeat-object">
+        <li v-repeat="primitiveValues">{{$key}} : {{$value}}</li>
+        <li>===</li>
+        <li v-repeat="objectValues">{{$key}} : {{msg}}</li>
+</ul>
+
+
+    <script type="text/javascript">
+
+    var data=  {
+        primitiveValues: {
+          FirstName: 'John',
+          LastName: 'Doe',
+          Age: 30
+        },
+        objectValues: {
+            one: {
+              msg: 'Hello'
+            },
+            two: {
+              msg: 'Bye'
+            }
+        }
+  };
+
+    var demo = new Vue({
+            el: '#repeat-object',
+            data:data
+        })
+    </script>
+    </body>
+</html>

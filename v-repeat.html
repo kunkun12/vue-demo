@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>v-repeat 指令</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+    </head>
+    <body>
+      <ul id="demo">
+        <li v-repeat="items" class="item-{{$index}}">
+                {{$index}} - {{parentMsg}} {{childMsg}}
+        </li>
+  </ul>
+
+
+    <script type="text/javascript">
+    var demo = new Vue({
+            el: '#demo',
+            data: {
+            parentMsg: 'Hello',
+            items:[{ childMsg: 'Foo' },{ childMsg: 'Bar' }]
+            }
+        })
+    </script>
+    </body>
+</html>

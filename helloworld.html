@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>vue.js Hello World</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+    </head>
+    <body>
+      <div id="demo">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+
+
+    <script type="text/javascript">
+        var data = {
+            message: 'Hello Vue.js!'
+          }
+          vm = new Vue({
+            el: '#demo',
+            data: data
+        })
+    </script>
+    </body>
+</html>

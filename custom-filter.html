@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>自定义过滤器</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+    </head>
+    <body>
+      <div id="demo">
+        <p>{{message|uppercase|reverse}}</p>
+        <input v-model="message">
+    </div>
+
+
+    <script type="text/javascript">
+    Vue.filter('reverse', function (value) {
+        return value.split('').reverse().join('')
+    })
+        var data = {
+            message: 'Hello Vue.js!'
+          }
+          vm = new Vue({
+            el: '#demo',
+            data: data
+        })
+    </script>
+    </body>
+</html>

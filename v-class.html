@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>v-class 指令</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+        <style >
+        p{
+          font-size: 5em
+        }
+          .red{
+            color: red;
+          }
+        .bold{
+          font-weight: bolder;
+        }
+        .hidden{
+          visibility: hidden
+        }
+        </style>
+    </head>
+    <body>
+      <div id="demo">
+        <span v-class="red:hasError,bold:isImportant,hidden:isHidden">我爱这个世界！</span>
+    </div>
+
+
+    <script type="text/javascript">
+        var data = {
+            isImportant:true,
+            hasError:false,
+            isHidden:false
+          }
+          vm = new Vue({
+            el: '#demo',
+            data: data
+        })
+    </script>
+    </body>
+</html>

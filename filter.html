@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>过滤器</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+    </head>
+    <body>
+      <div id="demo">
+    <p>
+        {{message | uppercase}}
+    </p>
+    <p>
+    </p>
+    <input v-on="keyup:doSomething | key enter">
+    </div>
+
+
+    <script type="text/javascript">
+
+
+          vm = new Vue({
+            el: '#demo',
+            data:{
+              message:"Hello World"
+            },
+            methods:{
+              doSomething:function(){
+                alert('doSomething');
+              }
+            }
+        })
+    </script>
+    </body>
+</html>

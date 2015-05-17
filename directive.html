@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>指令</title>
+        <meta charset="utf-8">
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+    </head>
+    <body>
+      <div id="demo">
+        <ul>
+          <li> <p v-text='message1'></p></li>
+          <li> <p v-text='message2'></p></li>
+          <li> <p v-html='message2'></p></li>
+          <li><input v-model="message"></li>
+          <li><input v-style='height:height'></li>
+          <li></li>
+        </ul>
+        <p>{{message}}</p>
+
+        <button v-on='click:mymethod'>
+          v-on-demo
+        </button>
+
+
+
+    </div>
+
+
+    <script type="text/javascript">
+
+         vm = new Vue({
+            el: '#demo',
+            data: {
+              message: 'Hello Vue.js!',
+              message1: 'I am message1,are you ok!',
+              message2: '<p style="color:red"> hello World <p>',
+              height:'100px',
+            },
+            methods:{
+              mymethod:function(){
+                alert('v-on demo')
+              }
+            }
+        })
+    </script>
+    </body>
+</html>

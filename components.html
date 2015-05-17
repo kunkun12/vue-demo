@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>自定义组件</title>
+        <meta charset="utf-8">
+         <style media="screen">
+               .scorestar li{
+                 display: inline-block;
+                 list-style: none
+               }
+               .scorestar li.selected{
+                 color: red
+               }
+         </style>
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+
+    </head>
+    <body>
+      <div id="app">
+        <score-star readonly  v-with='star'></score-star>
+        <score-star   v-with='star'></score-star>
+        <p>评分结果{{star.count}}</p>
+      </div>
+
+    <script type="text/javascript" src='app.js'></script>
+    </body>
+</html>

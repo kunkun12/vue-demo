@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>vue.js Hello World</title>
+        <meta charset="utf-8">
+
+        <script src="bower_components/vue/dist/vue.min.js"></script>
+        <style >
+          .mydiv{
+            background: red;
+            margin-right: 10px;
+            height: 300px;
+            width: 300px;
+            display: flex;
+            font-size: 40px;
+            align-items: center;
+            text-align: center;
+            margin-left: 10px;
+            -webkit-transition: all 3s ease;
+          }
+          .mydiv.test-enter,
+          .mydiv.test-leave{
+            height: 0;
+            width: 0;
+            opacity:0;
+          }
+          </style>
+    </head>
+    <body>
+      <div style='display:flex' id="demo">
+       <div  v-show='showdiv' class="mydiv ">
+     没有使用动画
+       </div>
+       <div  v-show='showdiv' v-transition="test" class="mydiv ">
+      使用了过渡
+       </div>
+       <button v-on='click:showdiv=!showdiv' type="button" name="button">
+       显示隐藏div
+       </button>
+    </div>
+
+
+    <script type="text/javascript">
+          vm = new Vue({
+            el: '#demo',
+            data: {
+              showdiv:true
+            }
+        })
+    </script>
+    </body>
+</html>
