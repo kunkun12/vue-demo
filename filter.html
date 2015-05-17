@@ -8,17 +8,15 @@
     <body>
       <div id="demo">
     <p>
-        {{message | uppercase}}
+      hello world小写转大写   {{message | uppercase}}
     </p>
     <p>
     </p>
+    key 过滤器 当按回车键之后触发事件
     <input v-on="keyup:doSomething | key enter">
     </div>
 
-
     <script type="text/javascript">
-
-
           vm = new Vue({
             el: '#demo',
             data:{
